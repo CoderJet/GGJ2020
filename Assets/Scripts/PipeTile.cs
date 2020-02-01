@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class PipeTile : MonoBehaviour
 {
+    public List<PipeTile> neighbours;
+
     public circuits.Direction currentDirection;
+    public circuits.Direction[] connections;
     public circuits.TileType type;
     public bool CanRotate = true;
 
@@ -50,20 +53,39 @@ public class PipeTile : MonoBehaviour
             return;
 
         Debug.Log("Rotate!");
-        if (currentDirection == circuits.Direction.up)
-            currentDirection = circuits.Direction.right;
-        else if (currentDirection == circuits.Direction.right)
-            currentDirection = circuits.Direction.down;
-        else if (currentDirection == circuits.Direction.down)
-            currentDirection = circuits.Direction.left;
-        else
-            currentDirection = circuits.Direction.up;
+        currentDirection = GetNextDirection(currentDirection);
 
-        //Re-check for activated pipes.
+        circuits.Direction[] directions = new circuits.Direction[connections.Length];
+        int i = 0;
+        foreach (circuits.Direction direction in connections)
+        {
+            directions[i] = GetNextDirection(direction);
+            i++;
+        }
+        connections = directions;
 
+    }
 
-        //check for win!
-        
+    private circuits.Direction GetNextDirection(circuits.Direction curDirection)
+    {
+        if (curDirection == circuits.Direction.up)
+        {
+            return circuits.Direction.right;
+        }
+        else if (curDirection == circuits.Direction.right)
+        {
+            return circuits.Direction.down;
+        }
+        else if (curDirection == circuits.Direction.down)
+        {
+            return circuits.Direction.left;
+        }
+        else if (curDirection == circuits.Direction.left)
+        {
+            return circuits.Direction.up;
+        }
+
+        return curDirection;
     }
 
     void RotateToCurrentDirection()

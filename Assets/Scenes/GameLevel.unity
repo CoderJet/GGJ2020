@@ -177,11 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '2x broken arms
-
-    2x Broken Legs
-
-    2x Broken heads'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4715b4c4f011b1a4aaae0e36c6832cd9, type: 2}
   m_sharedMaterial: {fileID: 1389882947810550482, guid: 4715b4c4f011b1a4aaae0e36c6832cd9,
@@ -251,13 +247,13 @@ MonoBehaviour:
   m_margin: {x: -11.605263, y: -38.053364, z: -21.04863, w: -13.702686}
   m_textInfo:
     textComponent: {fileID: 17084665}
-    characterCount: 45
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 9
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 3
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -3726,7 +3722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next Robot - Construction
+  m_text: Next Robot - Undefined
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4715b4c4f011b1a4aaae0e36c6832cd9, type: 2}
   m_sharedMaterial: {fileID: 1389882947810550482, guid: 4715b4c4f011b1a4aaae0e36c6832cd9,
@@ -3796,7 +3792,7 @@ MonoBehaviour:
   m_margin: {x: -7.1626663, y: 0, z: -21.234035, w: 40.04244}
   m_textInfo:
     textComponent: {fileID: 1219804950}
-    characterCount: 25
+    characterCount: 22
     spriteCount: 0
     spaceCount: 3
     wordCount: 4

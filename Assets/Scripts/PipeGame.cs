@@ -41,25 +41,53 @@ public class PipeGame : MonoBehaviour
                 else
                 {
                     PipeTile go = Instantiate(pipeTile, this.transform);
-                    go.currentDirection = ((circuits.Direction)Random.Range(0, 4));
                     go.type = ((circuits.TileType)Random.Range(2, 4));
+                    go.currentDirection = circuits.Direction.up;
+                    int direction = Random.Range(0, 4);
 
                     switch (go.type)
                     {
+                        case circuits.TileType.start:
+                            //go.typ
+                            go.connections = new circuits.Direction[]
+                            {
+                                circuits.Direction.right
+                            };
+                            break;
                         case circuits.TileType.corner:
                             go.typeSprite = cornerSprite;
                             go.typeSpriteActive = cornerSpriteActive;
                             go.PipeActive = false;
+                            go.connections = new circuits.Direction[]
+                            {
+                                circuits.Direction.up,
+                                circuits.Direction.right
+                            };
+                            for (int i = 0; i < direction; i++)
+                            {
+                                go.Rotate();
+                            }
                             break;
                         case circuits.TileType.straight:
                             go.typeSprite = straightSprite;
                             go.typeSpriteActive = straightSpriteActive;
                             go.PipeActive = false;
+                            go.connections = new circuits.Direction[]
+                            {
+                                circuits.Direction.up,
+                                circuits.Direction.down
+                            };
+                            if (direction % 2 == 1)
+                                go.Rotate();
                             break;
                         case circuits.TileType.end:
                             go.typeSprite = endSprite;
                             go.typeSpriteActive = endSpriteActive;
                             go.PipeActive = false;
+                            go.connections = new circuits.Direction[]
+                            {
+                                circuits.Direction.left
+                            };
                             break;
                     }
                 }

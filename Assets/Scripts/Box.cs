@@ -8,7 +8,7 @@ public class Box : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        tag.SetActive(false);
+        tag.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

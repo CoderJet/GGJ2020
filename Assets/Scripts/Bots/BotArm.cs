@@ -16,7 +16,8 @@ public class BotArm : MonoBehaviour
         int type = Random.Range(0, 15);
         armType = (ArmType)type;
 
-        animator.SetInteger("Type", type);
+        if (animator)
+            animator.SetInteger("Type", type);
     }
 }
 

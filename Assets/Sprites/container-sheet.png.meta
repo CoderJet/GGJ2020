@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 4c02bbe6fe6e6a1499a04d793cbf775e
+guid: bf76ee20d68e87b46a3f1a6c3c654af9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1706680198443631082
-    second: belts_0
+      213: 6153735163376300687
+    second: container-sheet_0
   - first:
-      213: -2583068722752987579
-    second: belts_1
+      213: 4815705152899816381
+    second: container-sheet_1
   - first:
-      213: -8404019475842194871
-    second: belts_2
+      213: -4588848306927550703
+    second: container-sheet_2
+  - first:
+      213: -8814042896725765959
+    second: container-sheet_3
+  - first:
+      213: 2531243548495674386
+    second: container-sheet_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: belts_1
+      name: container-sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,20 +121,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ed2edaea8172cd0800000000000000
-      internalID: -2583068722752987579
+      spriteID: f82ffd6f685766550800000000000000
+      internalID: 6153735163376300687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: belts_2
+      name: container-sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -136,14 +142,77 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94226f820dcee5b80800000000000000
-      internalID: -8404019475842194871
+      spriteID: dbb9c956252d4d240800000000000000
+      internalID: 4815705152899816381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f3e6117c22150c0800000000000000
+      internalID: -4588848306927550703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b01b992faa3ea580800000000000000
+      internalID: -8814042896725765959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c7514a898c02320800000000000000
+      internalID: 2531243548495674386
       vertices: []
       indices: 
       edges: []

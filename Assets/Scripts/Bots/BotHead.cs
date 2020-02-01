@@ -16,7 +16,8 @@ public class BotHead : MonoBehaviour
         int type = Random.Range(0, 5);
         headType = (HeadType)type;
 
-        animator.SetInteger("Type", type);
+        if (animator)
+            animator.SetInteger("Type", type);
     }
 }
 

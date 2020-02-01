@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float[] verticalLayerAffects;
     public SpriteRenderer sprite;
 
+    private float prevX = 0;
+
     void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -22,13 +24,16 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Move(targetVelocity);
-
         SetSortingOrder();
     }
 
     void Move(Vector2 targetVelocity)
     {
         rigidbody2D.velocity = (targetVelocity * movementSpeed) * Time.deltaTime;
+        if (targetVelocity.x != 0)
+        {
+            sprite.flipX = targetVelocity.x < 0;
+        }
     }
 
     void SetSortingOrder()

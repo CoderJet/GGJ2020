@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3088758270265579448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3088758271013873078}
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e63d483a28c0147a7f24895cc76f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalValue: 0
   value: 0
   botHead: {fileID: 4933549660250130015, guid: a8a16191ee34a3648b4d909099223491, type: 3}
   botBody: {fileID: 989258907552296855, guid: 643976e050e5c1e498906ae55605d279, type: 3}

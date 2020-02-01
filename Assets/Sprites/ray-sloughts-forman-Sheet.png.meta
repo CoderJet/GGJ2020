@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 4c02bbe6fe6e6a1499a04d793cbf775e
+guid: ab5f881c54adacb4cba5573cca3c57de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1706680198443631082
-    second: belts_0
+      213: 1106205520116146490
+    second: ray-sloughts-forman-Sheet_0
   - first:
-      213: -2583068722752987579
-    second: belts_1
+      213: -9174775022431530632
+    second: ray-sloughts-forman-Sheet_1
   - first:
-      213: -8404019475842194871
-    second: belts_2
+      213: 5569055661008695810
+    second: ray-sloughts-forman-Sheet_2
+  - first:
+      213: -1485268564398427324
+    second: ray-sloughts-forman-Sheet_3
+  - first:
+      213: -836983334275807385
+    second: ray-sloughts-forman-Sheet_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: belts_1
+      name: ray-sloughts-forman-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ed2edaea8172cd0800000000000000
-      internalID: -2583068722752987579
+      spriteID: a3169134f080a5f00800000000000000
+      internalID: 1106205520116146490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: belts_2
+      name: ray-sloughts-forman-Sheet_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +148,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94226f820dcee5b80800000000000000
-      internalID: -8404019475842194871
+      spriteID: 87197d52ab6aca080800000000000000
+      internalID: -9174775022431530632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ray-sloughts-forman-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2023dc81e92494d40800000000000000
+      internalID: 5569055661008695810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ray-sloughts-forman-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4433af62c14436be0800000000000000
+      internalID: -1485268564398427324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ray-sloughts-forman-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767819d87107264f0800000000000000
+      internalID: -836983334275807385
       vertices: []
       indices: 
       edges: []

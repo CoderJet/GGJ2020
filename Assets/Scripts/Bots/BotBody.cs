@@ -16,7 +16,8 @@ public class BotBody : MonoBehaviour
         int type = Random.Range(0, 5);
         robotType = (RobotType)type;
 
-        animator.SetInteger("Type", (int)robotType);
+        if (animator)
+            animator.SetInteger("Type", (int)robotType);
     }
 }
 

@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class Robot : MonoBehaviour
 {
+    Animator animator;
+
     public int value;
 
     public GameObject botHead;
@@ -27,6 +30,8 @@ public class Robot : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
+
         GameObject botHeadInstance = Instantiate(botHead, headSocket);
         GameObject botBodyInstance = Instantiate(botBody, bodySocket);
         GameObject leftArmInstance = Instantiate(leftArm, leftArmSocket);

@@ -13,7 +13,7 @@ public class BotArm : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        int type = Random.Range(0, 14);
+        int type = Random.Range(0, 15);
         armType = (ArmType)type;
 
         animator.SetInteger("Type", type);

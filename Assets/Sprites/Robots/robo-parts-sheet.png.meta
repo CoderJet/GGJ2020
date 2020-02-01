@@ -5,6 +5,30 @@ TextureImporter:
   - first:
       213: 1281929396825760482
     second: robo-parts-sheet_0
+  - first:
+      213: -1143033239250618872
+    second: robo-parts-sheet_0
+  - first:
+      213: -8786884447746998488
+    second: robo-parts-sheet_1
+  - first:
+      213: 4029816493017963190
+    second: robo-parts-sheet_2
+  - first:
+      213: -3346181705510121066
+    second: robo-parts-sheet_3
+  - first:
+      213: -7799988677944796516
+    second: robo-parts-sheet_4
+  - first:
+      213: 5273283247581994665
+    second: robo-parts-sheet_5
+  - first:
+      213: -8067939138504362332
+    second: robo-parts-sheet_6
+  - first:
+      213: 7128101710459536895
+    second: robo-parts-sheet_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,10 +128,10 @@ TextureImporter:
       name: robo-parts-sheet_0
       rect:
         serializedVersion: 2
-        x: 25
+        x: 0
         y: 16
-        width: 6
-        height: 9
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +139,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e22ee49ef35ac110800000000000000
-      internalID: 1281929396825760482
+      spriteID: 806b00033512320f0800000000000000
+      internalID: -1143033239250618872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82fb2a15627be0680800000000000000
+      internalID: -8786884447746998488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba9850efb8cce730800000000000000
+      internalID: 4029816493017963190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6919829b779ff81d0800000000000000
+      internalID: -3346181705510121066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a180f9f9fd0c390800000000000000
+      internalID: -7799988677944796516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae9424bc277e2940800000000000000
+      internalID: 5273283247581994665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6f9fb691ce80090800000000000000
+      internalID: -8067939138504362332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff58bc64dba1ce260800000000000000
+      internalID: 7128101710459536895
       vertices: []
       indices: 
       edges: []

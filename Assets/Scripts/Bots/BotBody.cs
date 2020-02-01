@@ -13,7 +13,7 @@ public class BotBody : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        int type = Random.Range(0, 4);
+        int type = Random.Range(0, 5);
         robotType = (RobotType)type;
 
         animator.SetInteger("Type", (int)robotType);

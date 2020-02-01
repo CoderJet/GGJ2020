@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class Robot : MonoBehaviour
 {
+    Animator animator;
+
     public int value;
 
     public GameObject botHead;
@@ -27,6 +30,8 @@ public class Robot : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
+
         GameObject botHeadInstance = Instantiate(botHead, headSocket);
         GameObject botBodyInstance = Instantiate(botBody, bodySocket);
         GameObject leftArmInstance = Instantiate(leftArm, leftArmSocket);
@@ -57,12 +62,12 @@ public class Robot : MonoBehaviour
 
         do
         {
-            head.isBroken = Random.Range(0, 1) == 1;
-            body.isBroken = Random.Range(0, 1) == 1;
-            lArm.isBroken = Random.Range(0, 1) == 1;
-            rArm.isBroken = Random.Range(0, 1) == 1;
-            lLeg.isBroken = Random.Range(0, 1) == 1;
-            rLeg.isBroken = Random.Range(0, 1) == 1;
+            head.isBroken = Random.Range(0, 2) == 1;
+            body.isBroken = Random.Range(0, 2) == 1;
+            lArm.isBroken = Random.Range(0, 2) == 1;
+            rArm.isBroken = Random.Range(0, 2) == 1;
+            lLeg.isBroken = Random.Range(0, 2) == 1;
+            rLeg.isBroken = Random.Range(0, 2) == 1;
 
             if (head.isBroken || body.isBroken || lArm.isBroken || rArm.isBroken || lLeg.isBroken || rLeg.isBroken)
                 hasNotGeneratedFault = false;

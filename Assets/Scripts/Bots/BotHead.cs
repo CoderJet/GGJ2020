@@ -7,6 +7,8 @@ public class BotHead : MonoBehaviour
 
     public HeadType headType;
 
+    public bool isBroken = false;
+
     public void Init()
     {
         animator = GetComponent<Animator>();

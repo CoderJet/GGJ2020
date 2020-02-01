@@ -7,6 +7,8 @@ public class BotArm : MonoBehaviour
 
     public ArmType armType;
 
+    public bool isBroken = false;
+
     public void Init()
     {
         animator = GetComponent<Animator>();

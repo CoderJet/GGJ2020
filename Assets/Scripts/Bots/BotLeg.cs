@@ -7,6 +7,8 @@ public class BotLeg : MonoBehaviour
 
     public LegType legType;
 
+    public bool isBroken = false;
+
     public void Init()
     {
         animator = GetComponent<Animator>();

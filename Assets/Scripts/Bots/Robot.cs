@@ -5,16 +5,11 @@ public class Robot : MonoBehaviour
     public int value;
 
     public GameObject botHead;
-
     public GameObject botBody;
-
     public GameObject leftArm;
     public GameObject rightArm;
-
     public GameObject leftLeg;
     public GameObject rightLeg;
-
-    public RobotType robotType;
 
     public Transform headSocket;
     public Transform bodySocket;
@@ -22,6 +17,13 @@ public class Robot : MonoBehaviour
     public Transform rightArmSocket;
     public Transform leftLegSocket;
     public Transform rightLegSocket;
+
+    BotHead head;
+    BotBody body;
+    BotArm lArm;
+    BotArm rArm;
+    BotLeg lLeg;
+    BotLeg rLeg;
 
     void Start()
     {
@@ -32,33 +34,38 @@ public class Robot : MonoBehaviour
         GameObject leftLegInstance = Instantiate(leftLeg, leftLegSocket);
         GameObject rightLegInstance = Instantiate(rightLeg, rightLegSocket);
 
-        BotHead head = botHeadInstance.GetComponent<BotHead>();
-        BotBody body = botBodyInstance.GetComponent<BotBody>();
-        BotArm lArm = leftArmInstance.GetComponent<BotArm>();
-        BotArm rArm = rightArmInstance.GetComponent<BotArm>();
-        BotLeg lLeg = leftLegInstance.GetComponent<BotLeg>();
-        BotLeg rLeg = rightLegInstance.GetComponent<BotLeg>();
+        head = botHeadInstance.GetComponent<BotHead>();
+        body = botBodyInstance.GetComponent<BotBody>();
+        lArm = leftArmInstance.GetComponent<BotArm>();
+        rArm = rightArmInstance.GetComponent<BotArm>();
+        lLeg = leftLegInstance.GetComponent<BotLeg>();
+        rLeg = rightLegInstance.GetComponent<BotLeg>();
 
         head.Init();
-
-        int type = Random.Range(0, 4);
-        robotType = (RobotType)type;
-
-        body.Init(robotType);
-
+        body.Init();
         lArm.Init();
         rArm.Init();
-
         lLeg.Init();
         rLeg.Init();
-    }
-}
 
-public enum RobotType
-{
-    cleaner,
-    gardener,
-    construction,
-    artist,
-    kill
+        GenerateFaults();
+    }
+
+    void GenerateFaults()
+    {
+        bool hasNotGeneratedFault = true;
+
+        do
+        {
+            head.isBroken = Random.Range(0, 1) == 1;
+            body.isBroken = Random.Range(0, 1) == 1;
+            lArm.isBroken = Random.Range(0, 1) == 1;
+            rArm.isBroken = Random.Range(0, 1) == 1;
+            lLeg.isBroken = Random.Range(0, 1) == 1;
+            rLeg.isBroken = Random.Range(0, 1) == 1;
+
+            if (head.isBroken || body.isBroken || lArm.isBroken || rArm.isBroken || lLeg.isBroken || rLeg.isBroken)
+                hasNotGeneratedFault = false;
+        } while (hasNotGeneratedFault);
+    }
 }

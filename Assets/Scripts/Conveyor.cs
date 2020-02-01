@@ -5,6 +5,7 @@ using UnityEngine;
 public class Conveyor : MonoBehaviour
 {
     private Animator[] animators;
+    private bool inTrigger = false;
 
     private void Awake()
     {
@@ -17,5 +18,20 @@ public class Conveyor : MonoBehaviour
         {
             a.SetTrigger(start ? "Start" : "Stop");
         }
+    }
+
+    public bool InTriggerArea()
+    {
+        return inTrigger;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        inTrigger = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        inTrigger = false;
     }
 }

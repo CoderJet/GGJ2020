@@ -49,6 +49,14 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        if (conveyorBelt.InTriggerArea())
+        {
+            if (Input.GetButtonDown("Jump") && currentRobotMovingToRepairBay == false && lastRobotMovingToFinishBay == false && currentRobot != null)
+            {
+
+            }
+        }
+
         if (currentRobotMovingToRepairBay)
         {
             currentRobot.transform.position = Vector3.MoveTowards(currentRobot.transform.position, robotRepairPosition.position, Time.deltaTime * 0.1f);

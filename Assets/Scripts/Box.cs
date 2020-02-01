@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class Box : MonoBehaviour
 {
@@ -14,6 +15,40 @@ public class Box : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         tag.SetActive(false);
+    }
+
+    private string GetTypeString()
+    {
+        string ret = "";
+
+        switch (boxType)
+        {
+            case BoxType.head:
+                ret = "Head";
+                break;
+            case BoxType.body:
+                ret = "Body";
+                break;
+            case BoxType.arms:
+                ret = "Arms";
+                break;
+            case BoxType.legs:
+                ret = "Legs";
+                break;
+            default:
+                break;
+        }
+
+        return ret;
+    }
+
+    private void Awake()
+    {
+        var comp = tag.GetComponentInChildren<TextMeshProUGUI>();
+        if (comp)
+        {
+            comp.text = GetTypeString();
+        }
     }
 
     void Interact()

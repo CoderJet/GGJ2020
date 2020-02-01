@@ -13,10 +13,11 @@ public class BotHead : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        int type = Random.Range(0, 4);
+        int type = Random.Range(0, 5);
         headType = (HeadType)type;
 
-        animator.SetInteger("Type", type);
+        if (animator)
+            animator.SetInteger("Type", type);
     }
 }
 

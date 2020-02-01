@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Transform robotEndPosition;
 
     public Conveyor conveyorBelt;
+    public Button button;
 
     public GameObject spawnBot;
     private GameObject currentRobot;
@@ -40,9 +41,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && currentRobotMovingToRepairBay == false && lastRobotMovingToFinishBay == false)
+        if (button.InTriggerArea())
         {
-            InitiateGameStep();
+            if (Input.GetButtonDown("Jump") && currentRobotMovingToRepairBay == false && lastRobotMovingToFinishBay == false)
+            {
+                InitiateGameStep();
+            }
         }
 
         if (currentRobotMovingToRepairBay)
@@ -63,6 +67,8 @@ public class GameManager : MonoBehaviour
                 lastRobotMovingToFinishBay = false;
                 if (currentRobot == null)
                     conveyorBelt.AnimateConveyor(false);
+                report.AddRobotScore(lastRobot.GetComponent<Robot>());
+                Destroy(lastRobot);
             }
         }
     }

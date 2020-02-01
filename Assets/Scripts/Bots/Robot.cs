@@ -74,6 +74,25 @@ public class Robot : MonoBehaviour
             if (head.isBroken || body.isBroken || lArm.isBroken || rArm.isBroken || lLeg.isBroken || rLeg.isBroken)
                 hasNotGeneratedFault = false;
         } while (hasNotGeneratedFault);
+
+        CalculateScore();
+    }
+
+    private void CalculateScore()
+    {
+        // Calculate the max total value we can get from the amount of broken elements.
+        if (head.isBroken)
+            totalValue += 2;
+        if (body.isBroken)
+            totalValue += 2;
+        if (lArm.isBroken)
+            totalValue += 2;
+        if (rArm.isBroken)
+            totalValue += 2;
+        if (lLeg.isBroken)
+            totalValue += 2;
+        if (rLeg.isBroken)
+            totalValue += 2;
     }
 
     public void FixArm(BotArm arm, bool left = false)

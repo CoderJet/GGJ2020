@@ -3,6 +3,13 @@ using TMPro;
 
 public class Box : MonoBehaviour
 {
+    [SerializeField] Sprite headBox;
+    [SerializeField] Sprite bodyBox;
+    [SerializeField] Sprite armBox;
+    [SerializeField] Sprite legBox;
+    [SerializeField] Sprite recycleBox;
+
+    [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameObject tag;
     [SerializeField] BoxType boxType;
     [SerializeField] LayerMask playerMask;
@@ -35,6 +42,9 @@ public class Box : MonoBehaviour
             case BoxType.legs:
                 ret = "Legs";
                 break;
+            case BoxType.recycle:
+                ret = "Recycle Bin";
+                break;
             default:
                 break;
         }
@@ -44,6 +54,27 @@ public class Box : MonoBehaviour
 
     private void Awake()
     {
+        switch (boxType)
+        {
+            case BoxType.head:
+                spriteRenderer.sprite = headBox;
+                break;
+            case BoxType.body:
+                spriteRenderer.sprite = bodyBox;
+                break;
+            case BoxType.arms:
+                spriteRenderer.sprite = armBox;
+                break;
+            case BoxType.legs:
+                spriteRenderer.sprite = legBox;
+                break;
+            case BoxType.recycle:
+                spriteRenderer.sprite = recycleBox;
+                break;
+            default:
+                break;
+        }
+
         var comp = tag.GetComponentInChildren<TextMeshProUGUI>();
         if (comp)
         {
@@ -64,8 +95,37 @@ public class Box : MonoBehaviour
 
         if(collisionCount > 0)
         {
-            // TODO
-            // colliders[0].gameObject;
+            Collider2D collider = colliders[0];
+            GameObject playerObj = collider.gameObject;
+
+            PlayerController playerController = playerObj.GetComponent<PlayerController>();
+            Inventory inventory = playerObj.GetComponent<Inventory>();
+
+            switch (boxType)
+            {
+                case BoxType.head:
+                    // TODO - inventory.heads;
+                    break;
+                case BoxType.body:
+                    // TODO - inventory.bodies;
+                    break;
+                case BoxType.arms:
+                    // TODO - inventory.arms;
+                    break;
+                case BoxType.legs:
+                    // TODO - inventory.legs;
+                    break;
+                case BoxType.recycle:
+                    // TODO
+                    if(playerController.isHoldingPart)
+                    {
+                        inventory.binItems.Add(playerController.currentHeldObject);
+                        playerController.GivePart();
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
@@ -75,5 +135,6 @@ enum BoxType
     head,
     body,
     arms,
-    legs
+    legs,
+    recycle
 }

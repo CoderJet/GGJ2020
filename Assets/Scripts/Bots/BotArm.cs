@@ -140,7 +140,7 @@ public class BotArm : MonoBehaviour
         return GetSpriteForType(armType);
     }
 
-    private Sprite GetSpriteForType(ArmType type)
+    public Sprite GetSpriteForType(ArmType type)
     {
         if (isBroken)
             return BrokenArm;

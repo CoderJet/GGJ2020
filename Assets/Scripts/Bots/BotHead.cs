@@ -45,7 +45,7 @@ public class BotHead : MonoBehaviour
         return GetSpriteForType(headType);
     }
 
-    private Sprite GetSpriteForType(HeadType type)
+    public Sprite GetSpriteForType(HeadType type)
     {
         switch (type)
         {

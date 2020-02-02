@@ -14,13 +14,15 @@ public class Inventory : MonoBehaviour
     public Dictionary<RobotType, int> bodies;
     public Dictionary<ArmType, int> arms;
     public Dictionary<LegType, int> legs;
+    public List<GameObject> binItems;
 
-    void Start()
+    void Awake()
     {
         InitializeHeads();
         InitializeBodies();
         InitializeArms();
         InitializeLegs();
+        binItems = new List<GameObject>();
     }
 
     void InitializeHeads()

@@ -331,6 +331,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb296dbd26fa8f42afe4b23cc1c3ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headBox: {fileID: 6153735163376300687, guid: bf76ee20d68e87b46a3f1a6c3c654af9, type: 3}
+  bodyBox: {fileID: 4815705152899816381, guid: bf76ee20d68e87b46a3f1a6c3c654af9, type: 3}
+  armBox: {fileID: -4588848306927550703, guid: bf76ee20d68e87b46a3f1a6c3c654af9, type: 3}
+  legBox: {fileID: -8814042896725765959, guid: bf76ee20d68e87b46a3f1a6c3c654af9, type: 3}
+  recycleBox: {fileID: 2531243548495674386, guid: bf76ee20d68e87b46a3f1a6c3c654af9,
+    type: 3}
+  spriteRenderer: {fileID: 5950711551355191421}
   tag: {fileID: 389709579}
   boxType: 0
   playerMask:

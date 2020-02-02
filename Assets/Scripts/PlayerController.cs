@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
 
     private float prevX = 0;
 
+    public bool isHoldingPart = false;
+    public GameObject currentHeldObject;
+
     void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -46,5 +49,17 @@ public class PlayerController : MonoBehaviour
                 sortingOrder++;
         }
         sprite.sortingOrder = sortingOrder;
+    }
+
+    public void TakePart(GameObject gameObject)
+    {
+        isHoldingPart = true;
+        currentHeldObject = Instantiate(gameObject, transform);
+    }
+
+    public void GivePart()
+    {
+        isHoldingPart = false;
+        Destroy(currentHeldObject);
     }
 }

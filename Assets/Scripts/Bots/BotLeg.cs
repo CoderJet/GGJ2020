@@ -19,7 +19,7 @@ public class BotLeg : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        int type = Random.Range(0, 7);
+        int type = Random.Range(0, 4);
         legType = (LegType)type;
 
         animator.SetInteger("Type", type);

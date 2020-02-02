@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
         if (currentRobotMovingToRepairBay)
         {
-            currentRobot.transform.position = Vector3.MoveTowards(currentRobot.transform.position, robotRepairPosition.position, Time.deltaTime * 0.1f);
+            currentRobot.transform.position = Vector3.MoveTowards(currentRobot.transform.position, robotRepairPosition.position, Time.deltaTime * 0.2f);
             if (Vector3.Distance(currentRobot.transform.position, robotRepairPosition.position) <= 0.001f)
             {
                 currentRobotMovingToRepairBay = false;
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
 
         if (lastRobotMovingToFinishBay)
         {
-            lastRobot.transform.position = Vector3.MoveTowards(lastRobot.transform.position, robotEndPosition.position, Time.deltaTime * 0.1f);
+            lastRobot.transform.position = Vector3.MoveTowards(lastRobot.transform.position, robotEndPosition.position, Time.deltaTime * 0.2f);
             if (Vector3.Distance(lastRobot.transform.position, robotEndPosition.position) <= 0.001f)
             {
                 lastRobotMovingToFinishBay = false;

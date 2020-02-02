@@ -51,15 +51,19 @@ public class PlayerController : MonoBehaviour
         sprite.sortingOrder = sortingOrder;
     }
 
-    public void TakePart(GameObject gameObject)
+    public void TakePart(GameObject partGO)
     {
         isHoldingPart = true;
-        currentHeldObject = Instantiate(gameObject, transform);
+        currentHeldObject = null;
+        partGO.transform.SetParent(this.transform);
+        partGO.transform.localPosition = Vector3.zero;
+        currentHeldObject = partGO;
     }
 
     public void GivePart()
     {
         isHoldingPart = false;
+        currentHeldObject.transform.SetParent(null);
         Destroy(currentHeldObject);
     }
 }

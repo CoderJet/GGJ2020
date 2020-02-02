@@ -24,6 +24,8 @@ public class Box : MonoBehaviour
         tag.SetActive(false);
     }
 
+    private int Scrap = 0;
+
     private string GetTypeString()
     {
         string ret = "";
@@ -119,7 +121,8 @@ public class Box : MonoBehaviour
                     // TODO
                     if(playerController.isHoldingPart)
                     {
-                        inventory.binItems.Add(playerController.currentHeldObject);
+                        //inventory.binItems.Add(playerController.currentHeldObject);
+                        Scrap++;
                         playerController.GivePart();
                     }
                     break;

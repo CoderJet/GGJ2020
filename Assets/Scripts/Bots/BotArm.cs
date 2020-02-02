@@ -4,6 +4,7 @@
 public class BotArm : MonoBehaviour
 {
     Animator animator;
+    SpriteRenderer renderer;
 
     public ArmType armType;
 
@@ -29,12 +30,27 @@ public class BotArm : MonoBehaviour
     public void Init()
     {
         animator = GetComponent<Animator>();
+        renderer = GetComponent<SpriteRenderer>();
 
         int type = Random.Range(0, 15);
         armType = (ArmType)type;
 
         if (animator)
             animator.SetInteger("Type", type);
+        if (renderer)
+            renderer.sprite = GetSprite();
+    }
+
+    public void Copy(BotArm arm)
+    {
+        if (renderer == null)
+            renderer = GetComponent<SpriteRenderer>();
+
+        this.armType = arm.armType;
+        if (this.animator)
+            this.animator.SetInteger("Type", (int)this.armType);
+        this.isBroken = arm.isBroken;
+        this.renderer.sprite = GetSprite();
     }
 
     public float Score(RobotType type)

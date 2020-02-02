@@ -9,12 +9,10 @@ public class Robot : MonoBehaviour
     public float totalValue;
     public float value;
     
-    public GameObject botHead;
-    public GameObject botBody;
-    public GameObject leftArm;
-    public GameObject rightArm;
-    public GameObject leftLeg;
-    public GameObject rightLeg;
+    public GameObject botHeadPrefab;
+    public GameObject botBodyPrefab;
+    public GameObject armPrefab;
+    public GameObject legPrefab;
 
     public Transform headSocket;
     public Transform bodySocket;
@@ -23,30 +21,37 @@ public class Robot : MonoBehaviour
     public Transform leftLegSocket;
     public Transform rightLegSocket;
 
-    public BotHead head;
-    public BotBody body;
-    public BotArm lArm;
-    public BotArm rArm;
-    public BotLeg lLeg;
-    public BotLeg rLeg;
+    public GameObject BotHeadInstance;
+    public GameObject BotBodyInstance;
+    public GameObject BotRightArmInstance;
+    public GameObject BotLeftArmInstance;
+    public GameObject BotLeftLegInstance;
+    public GameObject BotRightLegInstance;
+
+    BotHead head;
+    BotBody body;
+    BotArm lArm;
+    BotArm rArm;
+    BotLeg lLeg;
+    BotLeg rLeg;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
 
-        GameObject botHeadInstance = Instantiate(botHead, headSocket);
-        GameObject botBodyInstance = Instantiate(botBody, bodySocket);
-        GameObject leftArmInstance = Instantiate(leftArm, leftArmSocket);
-        GameObject rightArmInstance = Instantiate(rightArm, rightArmSocket);
-        GameObject leftLegInstance = Instantiate(leftLeg, leftLegSocket);
-        GameObject rightLegInstance = Instantiate(rightLeg, rightLegSocket);
+        BotHeadInstance = Instantiate(botHeadPrefab, headSocket);
+        BotBodyInstance = Instantiate(botBodyPrefab, bodySocket);
+        BotLeftArmInstance = Instantiate(armPrefab, leftArmSocket);
+        BotRightArmInstance = Instantiate(armPrefab, rightArmSocket);
+        BotLeftLegInstance = Instantiate(legPrefab, leftLegSocket);
+        BotRightLegInstance = Instantiate(legPrefab, rightLegSocket);
 
-        head = botHeadInstance.GetComponent<BotHead>();
-        body = botBodyInstance.GetComponent<BotBody>();
-        lArm = leftArmInstance.GetComponent<BotArm>();
-        rArm = rightArmInstance.GetComponent<BotArm>();
-        lLeg = leftLegInstance.GetComponent<BotLeg>();
-        rLeg = rightLegInstance.GetComponent<BotLeg>();
+        head = BotHeadInstance.GetComponent<BotHead>();
+        body = BotBodyInstance.GetComponent<BotBody>();
+        lArm = BotLeftArmInstance.GetComponent<BotArm>();
+        rArm = BotRightArmInstance.GetComponent<BotArm>();
+        lLeg = BotLeftLegInstance.GetComponent<BotLeg>();
+        rLeg = BotRightLegInstance.GetComponent<BotLeg>();
 
         head.Init();
         body.Init();
@@ -93,6 +98,14 @@ public class Robot : MonoBehaviour
             totalValue += 2;
         if (rLeg.isBroken)
             totalValue += 2;
+    }
+
+    public GameObject TakeArm(bool left = false)
+    {
+        GameObject go = Instantiate(armPrefab);
+        go.GetComponent<BotArm>().Copy(left ? lArm : rArm);
+        if (left) lArm = null; else rArm = null;
+        return go;
     }
 
     public void FixArm(BotArm arm, bool left = false)

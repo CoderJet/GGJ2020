@@ -26,6 +26,13 @@ public class BotHead : MonoBehaviour
             animator.SetInteger("Type", type);
     }
 
+    public void Copy(BotHead head)
+    {
+        this.headType = head.headType;
+        this.animator.SetInteger("Type", (int)this.headType);
+        this.isBroken = head.isBroken;
+    }
+
     public Sprite GetSprite()
     {
         return GetSpriteForType(headType);

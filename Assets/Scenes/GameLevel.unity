@@ -802,7 +802,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 288045656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1360713106}
+        m_MethodName: GetPart
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &288045656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4215,6 +4226,7 @@ MonoBehaviour:
   LeftLegImage: {fileID: 405200554}
   RightLegImage: {fileID: 483412632}
   Panel: {fileID: 1183988875}
+  player: {fileID: 1900259102}
 --- !u!1 &1515993491
 GameObject:
   m_ObjectHideFlags: 0
@@ -5298,13 +5310,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5722979f79fb9ab44bb5f116682b1fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 100
+  movementSpeed: 125
   verticalLayerAffects:
   - 0.398
   - 0.212
   - -0.299
   - -0.45
   sprite: {fileID: 922801960}
+  isHoldingPart: 0
+  currentHeldObject: {fileID: 0}
 --- !u!50 &1900259103
 Rigidbody2D:
   serializedVersion: 4

@@ -30,7 +30,7 @@ public class BotLeg : MonoBehaviour
         return GetSpriteForType(legType);
     }
 
-    private Sprite GetSpriteForType(LegType type)
+    public Sprite GetSpriteForType(LegType type)
     {
         if (isBroken)
             return BrokenLeg;

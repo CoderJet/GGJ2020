@@ -14,6 +14,8 @@ public class Box : MonoBehaviour
     [SerializeField] BoxType boxType;
     [SerializeField] LayerMask playerMask;
 
+    [SerializeField] AssetList assetList;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         tag.SetActive(true);
@@ -106,16 +108,16 @@ public class Box : MonoBehaviour
             switch (boxType)
             {
                 case BoxType.head:
-                    // TODO - inventory.heads;
+                    assetList.BuildHeadList(inventory.heads);
                     break;
                 case BoxType.body:
-                    // TODO - inventory.bodies;
+                    assetList.BuildBodyList(inventory.bodies);
                     break;
                 case BoxType.arms:
-                    // TODO - inventory.arms;
+                    assetList.BuildArmsList(inventory.arms);
                     break;
                 case BoxType.legs:
-                    // TODO - inventory.legs;
+                    assetList.BuildLegsList(inventory.legs);
                     break;
                 case BoxType.recycle:
                     // TODO

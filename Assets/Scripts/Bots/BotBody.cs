@@ -31,7 +31,7 @@ public class BotBody : MonoBehaviour
         return GetSpriteForType(robotType);
     }
 
-    private Sprite GetSpriteForType(RobotType type)
+    public Sprite GetSpriteForType(RobotType type)
     {
         if (isBroken)
             return BrokenBody;

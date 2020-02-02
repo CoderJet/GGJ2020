@@ -11,7 +11,7 @@ public class MenuAsset : MonoBehaviour
     public void Setup(Sprite icon, int count, string name)
     {
         image.sprite = icon;
-        itemCount.text = $"x{itemCount}";
+        itemCount.text = $"x{count}";
         itemName.text = name;
     }
 }

@@ -112,14 +112,18 @@ public class Box : MonoBehaviour
             {
                 case BoxType.head:
                     assetList.BuildHeadList(inventory.heads);
+                    assetList.gameObject.SetActive(true);
                     break;
                 case BoxType.body:
+                    assetList.gameObject.SetActive(true);
                     assetList.BuildBodyList(inventory.bodies);
                     break;
                 case BoxType.arms:
+                    assetList.gameObject.SetActive(true);
                     assetList.BuildArmsList(inventory.arms);
                     break;
                 case BoxType.legs:
+                    assetList.gameObject.SetActive(true);
                     assetList.BuildLegsList(inventory.legs);
                     break;
                 case BoxType.recycle:
@@ -139,8 +143,13 @@ public class Box : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButton("Jump") && inTriggerArea)
+        if (Input.GetButtonDown("Jump") && inTriggerArea)
             Interact();
+
+        //if (!inTriggerArea)
+        //{
+        //    assetList.gameObject.SetActive(false);
+        //}
     }
 }
 

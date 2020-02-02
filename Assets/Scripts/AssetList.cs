@@ -5,6 +5,11 @@ public class AssetList : MonoBehaviour
 {
     [SerializeField] GameObject assetItemPrefab;
 
+    public GameObject botHeadPrefab;
+    public GameObject botBodyPrefab;
+    public GameObject armPrefab;
+    public GameObject legPrefab;
+
     public void Clear()
     {
         foreach (Transform child in transform)
@@ -15,7 +20,8 @@ public class AssetList : MonoBehaviour
 
     public void BuildHeadList(Dictionary<HeadType, int> heads)
     {
-        BotHead botHead = new BotHead();
+        Clear();
+        BotHead botHead = botHeadPrefab.GetComponent<BotHead>();
 
         foreach (KeyValuePair<HeadType, int> head in heads)
         {
@@ -28,7 +34,8 @@ public class AssetList : MonoBehaviour
 
     public void BuildBodyList(Dictionary<RobotType, int> bodies)
     {
-        BotBody botBody = new BotBody();
+        Clear();
+        BotBody botBody = botBodyPrefab.GetComponent<BotBody>();
 
         foreach (KeyValuePair<RobotType, int> body in bodies)
         {
@@ -41,7 +48,8 @@ public class AssetList : MonoBehaviour
 
     public void BuildArmsList(Dictionary<ArmType, int> arms)
     {
-        BotArm botArm = new BotArm();
+        Clear();
+        BotArm botArm = armPrefab.GetComponent<BotArm>();
 
         foreach (KeyValuePair<ArmType, int> arm in arms)
         {
@@ -54,7 +62,8 @@ public class AssetList : MonoBehaviour
 
     public void BuildLegsList(Dictionary<LegType, int> legs)
     {
-        BotLeg botLeg = new BotLeg();
+        Clear();
+        BotLeg botLeg = legPrefab.GetComponent<BotLeg>();
 
         foreach (KeyValuePair<LegType, int> leg in legs)
         {

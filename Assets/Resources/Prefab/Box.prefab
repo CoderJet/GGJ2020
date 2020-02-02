@@ -343,6 +343,7 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 256
+  assetList: {fileID: 0}
 --- !u!61 &3678599688078132647
 BoxCollider2D:
   m_ObjectHideFlags: 0

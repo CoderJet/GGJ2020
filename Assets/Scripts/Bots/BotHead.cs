@@ -40,6 +40,16 @@ public class BotHead : MonoBehaviour
         renderer.sprite = GetSprite();
     }
 
+    public float Score(RobotType type)
+    {
+        float retScore = 0f;
+
+        if ((int)type == (int)headType)
+            retScore += 2;
+
+        return retScore;
+    }
+
     public Sprite GetSprite()
     {
         return GetSpriteForType(headType);

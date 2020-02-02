@@ -15,7 +15,7 @@ public class Report
 
     public float GetStarRating()
     {
-        return (currentScore / totalPossibleScore) * 5;
+        return Mathf.Max((currentScore / totalPossibleScore) * 5, 0);
     }
 
     public string Remarks()

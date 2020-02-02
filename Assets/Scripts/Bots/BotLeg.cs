@@ -27,6 +27,40 @@ public class BotLeg : MonoBehaviour
         animator.SetInteger("Type", type);
     }
 
+    public float Score(RobotType type)
+    {
+        float retScore = 0f;
+
+        switch (type)
+        {
+            case RobotType.cleaner:
+                retScore += legType == LegType.hover ? 2f : 0;
+                retScore += legType == LegType.speed ? 1f : 0;
+                break;
+            case RobotType.gardener:
+                retScore += legType == LegType.atv ? 2f : 0;
+                retScore += legType == LegType.speed ? 1f : 0;
+                break;
+            case RobotType.construction:
+                retScore += legType == LegType.hover ? 1f : 0;
+                retScore += legType == LegType.atv ? 2f : 0;
+                break;
+            case RobotType.artist:
+                retScore += legType == LegType.speed ? 1f : 0;
+                retScore += legType == LegType.hover ? 2f : 0;
+                retScore += legType == LegType.unicycle ? 1f : 0;
+                break;
+            case RobotType.kill:
+                retScore += legType == LegType.speed ? 2f : 0;
+                retScore += legType == LegType.unicycle ? 1f : 0;
+                break;
+            default:
+                break;
+        }
+
+        return retScore;
+    }
+
     public void Copy(BotLeg leg)
     {
         if (renderer == null)

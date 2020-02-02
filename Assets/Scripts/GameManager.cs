@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     SaveData saveData;
     public TextMeshProUGUI RobotType;
     public TextMeshProUGUI RobotFaults;
+    public TextMeshProUGUI RobotScore;
 
     public Transform robotSpawnPosition;
     public Transform robotRepairPosition;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     public Button button;
 
     public RobotDisplay display;
+    private int score = 0;
 
     public GameObject spawnBot;
     private GameObject currentRobot;
@@ -43,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (button.InTriggerArea())
+        if (button.InTriggerArea() && canClickButton)
         {
             if (Input.GetButtonDown("Jump") && currentRobotMovingToRepairBay == false && lastRobotMovingToFinishBay == false)
             {
@@ -83,9 +85,16 @@ public class GameManager : MonoBehaviour
                 if (currentRobot == null)
                     conveyorBelt.AnimateConveyor(false);
                 report.AddRobotScore(lastRobot.GetComponent<Robot>());
+                //Debug.Log("Current report score: " + report.GetStarRating());
+                score += 10;
                 Destroy(lastRobot);
             }
         }
+
+        if (currentRobot != null)
+            InitialiseText(currentRobot.GetComponent<Robot>());
+
+        RobotScore.text = "Current Score: " + score;
     }
 
     void InitiateGameStep()
@@ -114,9 +123,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    bool canClickButton = true;
     void InitialiseText(Robot rob)
     {
+        bool completed = currentRobot.GetComponent<Robot>().Completed();
         RobotType.text = "Next Robot - " + rob.GetTypeFriendly();
-        RobotFaults.text = rob.GetFaults();
+        if (!completed)
+            RobotFaults.text = rob.GetFaults();
+        else
+            RobotFaults.text = "Completed!";
+        canClickButton = (currentRobot == null || completed);
     }    
 }

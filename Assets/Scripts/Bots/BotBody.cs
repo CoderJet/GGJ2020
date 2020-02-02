@@ -4,6 +4,8 @@
 public class BotBody : MonoBehaviour
 {
     Animator animator;
+    public SpriteRenderer renderer;
+
     public Sprite BrokenBody;
     public Sprite CleanerBody;
     public Sprite GardenerBody;
@@ -28,7 +30,11 @@ public class BotBody : MonoBehaviour
 
     public void Copy(BotBody body)
     {
+        renderer = GetComponent<SpriteRenderer>();
 
+        robotType = body.robotType;
+        isBroken = body.isBroken;
+        renderer.sprite = body.GetSprite();
     }
 
     public Sprite GetSprite()

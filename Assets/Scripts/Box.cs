@@ -14,6 +14,8 @@ public class Box : MonoBehaviour
     [SerializeField] BoxType boxType;
     [SerializeField] LayerMask playerMask;
 
+    public PlayerController controller;
+
     private bool inTriggerArea = false;
     [SerializeField] AssetList assetList;
 
@@ -113,20 +115,52 @@ public class Box : MonoBehaviour
             switch (boxType)
             {
                 case BoxType.head:
-                    assetList.BuildHeadList(inventory.heads);
-                    assetList.gameObject.SetActive(assetList.Valid());
+                    if (controller.isHoldingPart)
+                    {
+                        inventory.heads[controller.currentHeldObject.GetComponent<BotHead>().headType]++;
+                        Destroy(controller.GivePart());
+                    }
+                    else
+                    {
+                        assetList.BuildHeadList(inventory.heads);
+                        assetList.gameObject.SetActive(assetList.Valid());
+                    }
                     break;
                 case BoxType.body:
-                    assetList.BuildBodyList(inventory.bodies);
-                    assetList.gameObject.SetActive(assetList.Valid());
+                    if (controller.isHoldingPart)
+                    {
+                        inventory.bodies[controller.currentHeldObject.GetComponent<BotBody>().robotType]++;
+                        Destroy(controller.GivePart());
+                    }
+                    else
+                    {
+                        assetList.BuildBodyList(inventory.bodies);
+                        assetList.gameObject.SetActive(assetList.Valid());
+                    }
                     break;
                 case BoxType.arms:
-                    assetList.BuildArmsList(inventory.arms);
-                    assetList.gameObject.SetActive(assetList.Valid());
+                    if (controller.isHoldingPart)
+                    {
+                        inventory.arms[controller.currentHeldObject.GetComponent<BotArm>().armType]++;
+                        Destroy(controller.GivePart());
+                    }
+                    else
+                    {
+                        assetList.BuildArmsList(inventory.arms);
+                        assetList.gameObject.SetActive(assetList.Valid());
+                    }
                     break;
                 case BoxType.legs:
-                    assetList.BuildLegsList(inventory.legs);
-                    assetList.gameObject.SetActive(assetList.Valid());
+                    if (controller.isHoldingPart)
+                    {
+                        inventory.legs[controller.currentHeldObject.GetComponent<BotLeg>().legType]++;
+                        Destroy(controller.GivePart());
+                    }
+                    else
+                    {
+                        assetList.BuildLegsList(inventory.legs);
+                        assetList.gameObject.SetActive(assetList.Valid());
+                    }
                     break;
                 case BoxType.recycle:
                     // TODO

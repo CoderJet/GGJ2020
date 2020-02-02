@@ -49,6 +49,9 @@ public class RobotDisplay : MonoBehaviour
         var slot = (Slot)part;
         if (filledSlots[slot])
         {
+            if (player.isHoldingPart)
+                return;
+
             GetPart(part);
             Hide();
         }
@@ -58,9 +61,15 @@ public class RobotDisplay : MonoBehaviour
             if (go != null)
             {
                 // He was holding a part!
-                robot.GetComponent<Robot>().FixPart(go, (slot == Slot.leftArm || slot == Slot.leftLeg));
-                UpdateRobot(robot.GetComponent<Robot>());
-                Hide();
+                if (robot.GetComponent<Robot>().FixPart(go, (slot == Slot.leftArm || slot == Slot.leftLeg)))
+                {
+                    UpdateRobot(robot.GetComponent<Robot>());
+                    Hide();
+                }
+                else
+                {
+                    player.TakePart(go);
+                }
             }
         }
     }

@@ -10,6 +10,8 @@ public class AssetList : MonoBehaviour
     public GameObject armPrefab;
     public GameObject legPrefab;
 
+    public PlayerController controller;
+
     private bool open = false;
     public void InTrigger(bool inTrigger)
     {
@@ -45,7 +47,7 @@ public class AssetList : MonoBehaviour
             GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
             MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
 
-            menuAsset.SetupCatalog(botHead.GetSpriteForType(head.Key), 1, head.Key.ToString());// TODO
+            menuAsset.SetupCatalog(botHead.GetSpriteForType(head.Key), 1, head.Key.ToString(), Slot.head);// TODO
         }
 
         foreach (KeyValuePair<RobotType, int> body in inventory.bodies)
@@ -53,7 +55,10 @@ public class AssetList : MonoBehaviour
             GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
             MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
 
-            menuAsset.SetupCatalog(botBody.GetSpriteForType(body.Key), 1, body.Key.ToString());// TODO
+            menuAsset.SetupCatalog(botBody.GetSpriteForType(body.Key), 1, body.Key.ToString(), Slot.body);// TODO
+            menuAsset.list = this;
+            menuAsset.inventory = inventory;
+            menuAsset.controller = controller;
         }
 
         foreach (KeyValuePair<ArmType, int> arm in inventory.arms)
@@ -61,7 +66,7 @@ public class AssetList : MonoBehaviour
             GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
             MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
 
-            menuAsset.SetupCatalog(botArm.GetSpriteForType(arm.Key), 1, arm.Key.ToString());// TODO
+            menuAsset.SetupCatalog(botArm.GetSpriteForType(arm.Key), 1, arm.Key.ToString(), Slot.leftArm);// TODO
         }
 
         foreach (KeyValuePair<LegType, int> leg in inventory.legs)
@@ -69,7 +74,7 @@ public class AssetList : MonoBehaviour
             GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
             MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
 
-            menuAsset.SetupCatalog(botLeg.GetSpriteForType(leg.Key), 1, leg.Key.ToString());// TODO
+            menuAsset.SetupCatalog(botLeg.GetSpriteForType(leg.Key), 1, leg.Key.ToString(), Slot.leftLeg);// TODO
         }
     }
 
@@ -83,7 +88,11 @@ public class AssetList : MonoBehaviour
             GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
             MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
 
-            menuAsset.Setup(botHead.GetSpriteForType(head.Key), head.Value, head.Key.ToString());
+            menuAsset.Setup(botHead.GetSpriteForType(head.Key), head.Value, head.Key.ToString(), Slot.head);
+            menuAsset.list = this;
+            Inventory inventory = FindObjectOfType<Inventory>();
+            menuAsset.inventory = inventory;
+            menuAsset.controller = controller;
         }
     }
 
@@ -97,7 +106,11 @@ public class AssetList : MonoBehaviour
             GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
             MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
 
-            menuAsset.Setup(botBody.GetSpriteForType(body.Key), body.Value, body.Key.ToString());
+            menuAsset.Setup(botBody.GetSpriteForType(body.Key), body.Value, body.Key.ToString(), Slot.body);
+            menuAsset.list = this;
+            Inventory inventory = FindObjectOfType<Inventory>();
+            menuAsset.inventory = inventory;
+            menuAsset.controller = controller;
         }
     }
 
@@ -111,7 +124,11 @@ public class AssetList : MonoBehaviour
             GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
             MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
 
-            menuAsset.Setup(botArm.GetSpriteForType(arm.Key), arm.Value, arm.Key.ToString());
+            menuAsset.Setup(botArm.GetSpriteForType(arm.Key), arm.Value, arm.Key.ToString(), Slot.leftArm);
+            menuAsset.list = this;
+            Inventory inventory = FindObjectOfType<Inventory>();
+            menuAsset.inventory = inventory;
+            menuAsset.controller = controller;
         }
     }
 
@@ -125,7 +142,11 @@ public class AssetList : MonoBehaviour
             GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
             MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
 
-            menuAsset.Setup(botLeg.GetSpriteForType(leg.Key), leg.Value, leg.Key.ToString());
+            menuAsset.Setup(botLeg.GetSpriteForType(leg.Key), leg.Value, leg.Key.ToString(), Slot.leftLeg);
+            menuAsset.list = this;
+            Inventory inventory = FindObjectOfType<Inventory>();
+            menuAsset.inventory = inventory;
+            menuAsset.controller = controller;
         }
     }
 }

@@ -35,10 +35,14 @@ public class PlayerController : MonoBehaviour
             if (!al.gameObject.activeSelf)
             {
                 al.Menu();
+                al.InTrigger(true);
                 al.gameObject.SetActive(true);
             }
             else
+            {
+                al.InTrigger(false);
                 al.gameObject.SetActive(false);
+            }
         }
     }
 

@@ -35,6 +35,8 @@ public class Robot : MonoBehaviour
     BotLeg lLeg;
     BotLeg rLeg;
 
+    RobotType type;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -55,6 +57,7 @@ public class Robot : MonoBehaviour
 
         head.Init();
         body.Init();
+        type = body.robotType;
         body.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         lArm.Init();
         lArm.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
@@ -114,6 +117,8 @@ public class Robot : MonoBehaviour
                     return head.GetSprite();
                 break;
             case Slot.body:
+                if (body != null)
+                    return body.GetSprite();
                 break;
             case Slot.leftArm:
                 if (lArm != null)
@@ -163,29 +168,43 @@ public class Robot : MonoBehaviour
     public GameObject TakeBody()
     {
         GameObject go = Instantiate(botBodyPrefab);
-        //go.GetComponent<BotBody>().Copy(body);
+        go.GetComponent<BotBody>().Copy(body);
         body = null;
         return go;
     }
 
-    public void FixPart(GameObject part, bool left = false)
+    public bool FixPart(GameObject part, bool left = false)
     {
         if (part.GetComponent<BotHead>() != null)
         {
+            if (part.GetComponent<BotHead>().isBroken)
+                return false;
             FixHead(part.GetComponent<BotHead>());
+            return true;
         }
         else if (part.GetComponent<BotBody>() != null)
         {
+            if (part.GetComponent<BotBody>().isBroken)
+                return false;
             FixBody(part.GetComponent<BotBody>());
+            return true;
         }
         else if (part.GetComponent<BotArm>() != null)
         {
+            if (part.GetComponent<BotArm>().isBroken)
+                return false;
             FixArm(part.GetComponent<BotArm>(), left);
+            return true;
         }
         else if (part.GetComponent<BotLeg>() != null)
         {
+            if (part.GetComponent<BotLeg>().isBroken)
+                return false;
             FixLeg(part.GetComponent<BotLeg>(), left);
+            return true;
         }
+
+        return false;
 
         // Destroy it afterwards.
     }
@@ -196,11 +215,13 @@ public class Robot : MonoBehaviour
         {
             lArm = arm;
             lArm.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            value += arm.Score(type);
         }
         else
         {
             rArm = arm;
             rArm.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            value += arm.Score(type);
         }
     }
 
@@ -210,11 +231,13 @@ public class Robot : MonoBehaviour
         {
             lLeg = leg;
             lLeg.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            value += leg.Score(type);
         }
         else
         {
             rLeg = leg;
             rLeg.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            value += leg.Score(type);
         }
     }
 
@@ -222,12 +245,19 @@ public class Robot : MonoBehaviour
     {
         this.head = head;
         head.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        value += head.Score(type);
     }
 
     public void FixBody(BotBody body)
     {
         this.body = body;
         body.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        value += (this.type == body.robotType) ? 2 : 0;
+    }
+
+    public bool Completed()
+    {
+        return ((head != null && !head.isBroken) && (lArm != null && !lArm.isBroken) && (rArm != null && !rArm.isBroken) && (body != null && !body.isBroken) && (lLeg != null && !lLeg.isBroken) && (rLeg != null && !rLeg.isBroken));
     }
 
     public string GetTypeFriendly()
@@ -235,7 +265,7 @@ public class Robot : MonoBehaviour
         string ret = "N/A";
         if (body != null)
         {
-            switch (body.robotType)
+            switch (type)
             {
                 case RobotType.cleaner:
                     ret = "Cleaner";
@@ -265,26 +295,52 @@ public class Robot : MonoBehaviour
 
         StringBuilder ret = new StringBuilder();
 
-        if (head.isBroken)
+        if (head == null)
+            ret.Append("One Missing Head").AppendLine();
+
+        if (head != null && head.isBroken)
             ret.Append("One Broken Head").AppendLine();
-        if (body.isBroken)
+
+        if (body == null)
+            ret.Append("One Missing Body").AppendLine();
+
+        if (body != null && body.isBroken)
             ret.Append("One Broken Body").AppendLine();
 
-        if (lArm.isBroken || rArm.isBroken)
+        if (lArm == null || rArm == null)
         {
-            if (lArm.isBroken && rArm.isBroken)
+            if (lArm == null && rArm == null)
+                ret.Append("Two Missing Arms").AppendLine();
+            else
+                ret.Append("One Missing Arm").AppendLine();
+        }
+
+        if (lArm != null || rArm != null && (lArm.isBroken || rArm.isBroken))
+        {
+            if (lArm != null && rArm != null && lArm.isBroken && rArm.isBroken)
                 ret.Append("Two Broken Arms").AppendLine();
             else
                 ret.Append("One Broken Arm").AppendLine();
         }
 
-        if (lLeg.isBroken || rLeg.isBroken)
+        if (lLeg == null || rLeg == null)
         {
-            if (lLeg.isBroken && rLeg.isBroken)
+            if (lLeg == null && rLeg == null)
+                ret.Append("Two Missing Legs").AppendLine();
+            else
+                ret.Append("One Missing Leg");
+        }
+
+        if (lLeg != null || rLeg != null && (lLeg.isBroken || rLeg.isBroken))
+        {
+            if (lLeg != null && rLeg != null && lLeg.isBroken && rLeg.isBroken)
                 ret.Append("Two Broken Legs").AppendLine();
             else
                 ret.Append("One Broken Leg").AppendLine();
         }
+
+        if (ret.ToString() == "")
+            ret.Append("Completed!").AppendLine();
 
         return ret.ToString();
     }

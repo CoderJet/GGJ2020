@@ -13,5 +13,15 @@ public class MenuAsset : MonoBehaviour
         image.sprite = icon;
         itemCount.text = $"x{count}";
         itemName.text = name;
+        if (GetComponent<UnityEngine.UI.Button>() != null)
+        {
+            UnityEngine.UI.Button button = GetComponent<UnityEngine.UI.Button>();
+            button.onClick.AddListener(OnClick);
+        }
+    }
+
+    public void OnClick()
+    {
+
     }
 }

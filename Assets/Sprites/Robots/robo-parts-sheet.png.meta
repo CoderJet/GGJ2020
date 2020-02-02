@@ -161,6 +161,132 @@ TextureImporter:
   - first:
       213: 6445742388939497154
     second: robo-parts-sheet_44
+  - first:
+      213: 3156728330615726552
+    second: robo-parts-sheet_8
+  - first:
+      213: 6443810160279211862
+    second: robo-parts-sheet_9
+  - first:
+      213: -7193835143866525697
+    second: robo-parts-sheet_10
+  - first:
+      213: -2850681586621928166
+    second: robo-parts-sheet_11
+  - first:
+      213: 2682528829921692263
+    second: robo-parts-sheet_12
+  - first:
+      213: -7847096681362092738
+    second: robo-parts-sheet_13
+  - first:
+      213: 3131972454498481149
+    second: robo-parts-sheet_14
+  - first:
+      213: -1407297437497173696
+    second: robo-parts-sheet_15
+  - first:
+      213: 9215812040891906204
+    second: robo-parts-sheet_16
+  - first:
+      213: 4328747290145575638
+    second: robo-parts-sheet_17
+  - first:
+      213: 1964761268543453765
+    second: robo-parts-sheet_18
+  - first:
+      213: 4648673166188679021
+    second: robo-parts-sheet_19
+  - first:
+      213: -9012360144272642522
+    second: robo-parts-sheet_20
+  - first:
+      213: -942698901107950348
+    second: robo-parts-sheet_21
+  - first:
+      213: -894364308976260636
+    second: robo-parts-sheet_22
+  - first:
+      213: 4753223832400019138
+    second: robo-parts-sheet_23
+  - first:
+      213: 8585066801673978816
+    second: robo-parts-sheet_24
+  - first:
+      213: 3991269852847816108
+    second: robo-parts-sheet_25
+  - first:
+      213: 8960973641765216645
+    second: robo-parts-sheet_26
+  - first:
+      213: -1320753940059985249
+    second: robo-parts-sheet_27
+  - first:
+      213: -6858628387665539090
+    second: robo-parts-sheet_28
+  - first:
+      213: 787990740918732392
+    second: robo-parts-sheet_29
+  - first:
+      213: 6517235208559660736
+    second: robo-parts-sheet_30
+  - first:
+      213: 3594429925158125893
+    second: robo-parts-sheet_31
+  - first:
+      213: 5119550379607366586
+    second: robo-parts-sheet_32
+  - first:
+      213: 9175977199275258636
+    second: robo-parts-sheet_33
+  - first:
+      213: 7267232708164596717
+    second: robo-parts-sheet_34
+  - first:
+      213: 7061418842752932451
+    second: robo-parts-sheet_35
+  - first:
+      213: 8804787477263077619
+    second: robo-parts-sheet_36
+  - first:
+      213: 2716487665686311255
+    second: robo-parts-sheet_37
+  - first:
+      213: 6228395625853456582
+    second: robo-parts-sheet_38
+  - first:
+      213: 1424534263939240555
+    second: robo-parts-sheet_39
+  - first:
+      213: 6142161490643655735
+    second: robo-parts-sheet_40
+  - first:
+      213: -3899986699274262160
+    second: robo-parts-sheet_41
+  - first:
+      213: -6158926022984389779
+    second: robo-parts-sheet_42
+  - first:
+      213: -5765662678671145523
+    second: robo-parts-sheet_45
+  - first:
+      213: 4914403158272513152
+    second: robo-parts-sheet_46
+  - first:
+      213: 6256892731342888887
+    second: robo-parts-sheet_47
+  - first:
+      213: -8034569748231857527
+    second: robo-parts-sheet_48
+  - first:
+      213: -6559689460493740750
+    second: robo-parts-sheet_49
+  - first:
+      213: 4282231432040721355
+    second: robo-parts-sheet_50
+  - first:
+      213: -9049974965858138081
+    second: robo-parts-sheet_51
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -439,8 +565,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d86fa83797a616f0800000000000000
-      internalID: -714199222958724908
+      spriteID: 8d123ce01b3fecb20800000000000000
+      internalID: 3156728330615726552
       vertices: []
       indices: 
       edges: []
@@ -460,8 +586,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1ecf0bc43cb06940800000000000000
-      internalID: 5287432897464094238
+      spriteID: 65fce7333330d6950800000000000000
+      internalID: 6443810160279211862
       vertices: []
       indices: 
       edges: []
@@ -481,8 +607,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fbb7e4504643c720800000000000000
-      internalID: 2865211030054091767
+      spriteID: ff75d1d1d0d5a2c90800000000000000
+      internalID: -7193835143866525697
       vertices: []
       indices: 
       edges: []
@@ -502,8 +628,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3919162c468d240c0800000000000000
-      internalID: -4592870742694981229
+      spriteID: a1d27a553385078d0800000000000000
+      internalID: -2850681586621928166
       vertices: []
       indices: 
       edges: []
@@ -523,8 +649,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6662c903384873dc0800000000000000
-      internalID: -3659310473224116634
+      spriteID: 76a0a3712c14a3520800000000000000
+      internalID: 2682528829921692263
       vertices: []
       indices: 
       edges: []
@@ -544,8 +670,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69b3a2a399cce0070800000000000000
-      internalID: 8074616140399786902
+      spriteID: e3d044dd423891390800000000000000
+      internalID: -7847096681362092738
       vertices: []
       indices: 
       edges: []
@@ -565,8 +691,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79bf43fd05cfc60d0800000000000000
-      internalID: -3428087792063415401
+      spriteID: df3b0bc7a50077b20800000000000000
+      internalID: 3131972454498481149
       vertices: []
       indices: 
       edges: []
@@ -586,8 +712,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e34a17df2ed42be0800000000000000
-      internalID: -1502832078581251103
+      spriteID: 049d9a0df66487ce0800000000000000
+      internalID: -1407297437497173696
       vertices: []
       indices: 
       edges: []
@@ -607,8 +733,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52ecee01700eadaf0800000000000000
-      internalID: -370737698351165915
+      spriteID: c983126493425ef70800000000000000
+      internalID: 9215812040891906204
       vertices: []
       indices: 
       edges: []
@@ -628,8 +754,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 891a9630dff9f7810800000000000000
-      internalID: 1765305487985320344
+      spriteID: 6d2df87c9bcc21c30800000000000000
+      internalID: 4328747290145575638
       vertices: []
       indices: 
       edges: []
@@ -649,8 +775,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3357420c7c65233a0800000000000000
-      internalID: -6687187080769669837
+      spriteID: 54a7af7c6fb344b10800000000000000
+      internalID: 1964761268543453765
       vertices: []
       indices: 
       edges: []
@@ -670,8 +796,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d30a16f88f43c5b0800000000000000
-      internalID: -5349344482722970669
+      spriteID: d6f019b6d97638040800000000000000
+      internalID: 4648673166188679021
       vertices: []
       indices: 
       edges: []
@@ -691,8 +817,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c0041b7b72f247c0800000000000000
-      internalID: -4088438899539181376
+      spriteID: 62eadb4c23aade280800000000000000
+      internalID: -9012360144272642522
       vertices: []
       indices: 
       edges: []
@@ -712,8 +838,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd3020c2707caa3d0800000000000000
-      internalID: -3194522152048917540
+      spriteID: 4fc3f45185cdae2f0800000000000000
+      internalID: -942698901107950348
       vertices: []
       indices: 
       edges: []
@@ -733,8 +859,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bee5be9ff23f1ce0800000000000000
-      internalID: -1432370083019755853
+      spriteID: 4e9aea746649693f0800000000000000
+      internalID: -894364308976260636
       vertices: []
       indices: 
       edges: []
@@ -754,8 +880,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 521128f23efb3a450800000000000000
-      internalID: 6098929302865318181
+      spriteID: 2cebf1454e7d6f140800000000000000
+      internalID: 4753223832400019138
       vertices: []
       indices: 
       edges: []
@@ -775,8 +901,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 946415c4f450a5e00800000000000000
-      internalID: 1034144902575900233
+      spriteID: 0c3c6ce35c8442770800000000000000
+      internalID: 8585066801673978816
       vertices: []
       indices: 
       edges: []
@@ -796,8 +922,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14defea2b1ebf0bc0800000000000000
-      internalID: -3814621335465759423
+      spriteID: cad38b5d8c6d36730800000000000000
+      internalID: 3991269852847816108
       vertices: []
       indices: 
       edges: []
@@ -817,8 +943,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df0966504bf1eafb0800000000000000
-      internalID: -4634732108472479491
+      spriteID: 581ed07cc06cb5c70800000000000000
+      internalID: 8960973641765216645
       vertices: []
       indices: 
       edges: []
@@ -838,8 +964,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0116a4bcfd1017da0800000000000000
-      internalID: -5948971572079730416
+      spriteID: f9ae6070a4dbbade0800000000000000
+      internalID: -1320753940059985249
       vertices: []
       indices: 
       edges: []
@@ -859,8 +985,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aa8b4634c9ec2ba0800000000000000
-      internalID: -6112253565314823511
+      spriteID: eef09cae1d141d0a0800000000000000
+      internalID: -6858628387665539090
       vertices: []
       indices: 
       edges: []
@@ -880,8 +1006,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76cbb378a185559f0800000000000000
-      internalID: -480380914283856793
+      spriteID: 86602c667618fea00800000000000000
+      internalID: 787990740918732392
       vertices: []
       indices: 
       edges: []
@@ -901,8 +1027,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffe316c6a56218760800000000000000
-      internalID: 7458284627709476607
+      spriteID: 0ce0ed374eed17a50800000000000000
+      internalID: 6517235208559660736
       vertices: []
       indices: 
       edges: []
@@ -922,8 +1048,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 030fbbd1dceb100d0800000000000000
-      internalID: -3458273250667401168
+      spriteID: 541851b09faf1e130800000000000000
+      internalID: 3594429925158125893
       vertices: []
       indices: 
       edges: []
@@ -943,8 +1069,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c654dd0f326e13f0800000000000000
-      internalID: -928196450237262138
+      spriteID: abb963a12fb4c0740800000000000000
+      internalID: 5119550379607366586
       vertices: []
       indices: 
       edges: []
@@ -964,8 +1090,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 385de5c0879d90fb0800000000000000
-      internalID: -4680971228048075389
+      spriteID: c03b2e575ae975f70800000000000000
+      internalID: 9175977199275258636
       vertices: []
       indices: 
       edges: []
@@ -985,14 +1111,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2de390e356422620800000000000000
-      internalID: 2747836048713444651
+      spriteID: de3304605a56ad460800000000000000
+      internalID: 7267232708164596717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: robo-parts-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ad98446033ff160800000000000000
+      internalID: 7061418842752932451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_36
       rect:
         serializedVersion: 2
         x: 0
@@ -1006,14 +1153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db9b6495aabb2cbc0800000000000000
-      internalID: -3764239998211671619
+      spriteID: 3f0d2119f83e03a70800000000000000
+      internalID: 8804787477263077619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robo-parts-sheet_36
+      name: robo-parts-sheet_37
       rect:
         serializedVersion: 2
         x: 16
@@ -1027,14 +1174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62aec87bbd8f7b440800000000000000
-      internalID: 4951699937878141478
+      spriteID: 75176fda327e2b520800000000000000
+      internalID: 2716487665686311255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robo-parts-sheet_37
+      name: robo-parts-sheet_38
       rect:
         serializedVersion: 2
         x: 32
@@ -1048,14 +1195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e0494fa48776cc40800000000000000
-      internalID: 5532240604031434985
+      spriteID: 6c0979f72d4bf6650800000000000000
+      internalID: 6228395625853456582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robo-parts-sheet_38
+      name: robo-parts-sheet_39
       rect:
         serializedVersion: 2
         x: 48
@@ -1069,14 +1216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e378a8766c815b320800000000000000
-      internalID: 2572990002531829566
+      spriteID: b6298749d56f4c310800000000000000
+      internalID: 1424534263939240555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robo-parts-sheet_39
+      name: robo-parts-sheet_40
       rect:
         serializedVersion: 2
         x: 64
@@ -1090,14 +1237,98 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e303a52f3b77718d0800000000000000
-      internalID: -2875698222303924162
+      spriteID: 73c16ea45575d3550800000000000000
+      internalID: 6142161490643655735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robo-parts-sheet_40
+      name: robo-parts-sheet_41
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079620192c670e9c0800000000000000
+      internalID: -3899986699274262160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_42
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b2b1ad969178aa0800000000000000
+      internalID: -6158926022984389779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_43
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbad95380caf1dd0800000000000000
+      internalID: -2513100915790206007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce9a6e3d80e37950800000000000000
+      internalID: 6445742388939497154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_45
       rect:
         serializedVersion: 2
         x: 0
@@ -1111,14 +1342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3305506e345662d0800000000000000
-      internalID: -3285846251239308485
+      spriteID: dc5441f67504cffa0800000000000000
+      internalID: -5765662678671145523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robo-parts-sheet_41
+      name: robo-parts-sheet_46
       rect:
         serializedVersion: 2
         x: 16
@@ -1132,14 +1363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c1223183ccba1e20800000000000000
-      internalID: 3322175223011353028
+      spriteID: 08414e382a7733440800000000000000
+      internalID: 4914403158272513152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robo-parts-sheet_42
+      name: robo-parts-sheet_47
       rect:
         serializedVersion: 2
         x: 32
@@ -1153,8 +1384,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d83f16f60f530b210800000000000000
-      internalID: 1346635595360891789
+      spriteID: 7bf9a69e9c2f4d650800000000000000
+      internalID: 6256892731342888887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_48
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a5a8902697f7090800000000000000
+      internalID: -8034569748231857527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235956eb03d47f4a0800000000000000
+      internalID: -6559689460493740750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_50
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbacc89cca8d6b30800000000000000
+      internalID: 4282231432040721355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robo-parts-sheet_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1809d5a7b7086280800000000000000
+      internalID: -9049974965858138081
       vertices: []
       indices: 
       edges: []

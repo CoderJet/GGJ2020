@@ -68,13 +68,13 @@ MonoBehaviour:
     type: 3}
   CleanerBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
     type: 3}
-  GardenerBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
+  GardenerBody: {fileID: 3322175223011353028, guid: 5cf685b674b0ac84bbef7dc87460244e,
     type: 3}
-  ConstructionBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
+  ConstructionBody: {fileID: 1346635595360891789, guid: 5cf685b674b0ac84bbef7dc87460244e,
     type: 3}
-  ArtistBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
+  ArtistBody: {fileID: -2513100915790206007, guid: 5cf685b674b0ac84bbef7dc87460244e,
     type: 3}
-  KillBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
+  KillBody: {fileID: 6445742388939497154, guid: 5cf685b674b0ac84bbef7dc87460244e,
     type: 3}
   robotType: 0
   isBroken: 0

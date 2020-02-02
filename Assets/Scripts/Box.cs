@@ -21,12 +21,14 @@ public class Box : MonoBehaviour
     {
         inTriggerArea = true;
         tag.SetActive(true);
+        assetList.InTrigger(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         inTriggerArea = false;
         tag.SetActive(false);
+        assetList.InTrigger(false);
     }
 
     private int Scrap = 0;
@@ -112,19 +114,19 @@ public class Box : MonoBehaviour
             {
                 case BoxType.head:
                     assetList.BuildHeadList(inventory.heads);
-                    assetList.gameObject.SetActive(true);
+                    assetList.gameObject.SetActive(assetList.Valid());
                     break;
                 case BoxType.body:
-                    assetList.gameObject.SetActive(true);
                     assetList.BuildBodyList(inventory.bodies);
+                    assetList.gameObject.SetActive(assetList.Valid());
                     break;
                 case BoxType.arms:
-                    assetList.gameObject.SetActive(true);
                     assetList.BuildArmsList(inventory.arms);
+                    assetList.gameObject.SetActive(assetList.Valid());
                     break;
                 case BoxType.legs:
-                    assetList.gameObject.SetActive(true);
                     assetList.BuildLegsList(inventory.legs);
+                    assetList.gameObject.SetActive(assetList.Valid());
                     break;
                 case BoxType.recycle:
                     // TODO
@@ -146,10 +148,8 @@ public class Box : MonoBehaviour
         if (Input.GetButtonDown("Jump") && inTriggerArea)
             Interact();
 
-        //if (!inTriggerArea)
-        //{
-        //    assetList.gameObject.SetActive(false);
-        //}
+        if (assetList.Valid() == false)
+            assetList.gameObject.SetActive(false);
     }
 }
 

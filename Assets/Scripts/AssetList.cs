@@ -10,6 +10,17 @@ public class AssetList : MonoBehaviour
     public GameObject armPrefab;
     public GameObject legPrefab;
 
+    private bool open = false;
+    public void InTrigger(bool inTrigger)
+    {
+        open = inTrigger;
+    }
+
+    public bool Valid()
+    {
+        return open;
+    }
+
     public void Clear()
     {
         foreach (Transform child in transform)

@@ -5195,7 +5195,7 @@ MonoBehaviour:
   startingHeadCount: 1
   startingBodyCount: 1
   startingArmCount: 1
-  startingLegCount: 1
+  startingLegCount: 2
   binItems: []
 --- !u!1 &1917246311
 GameObject:

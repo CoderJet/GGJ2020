@@ -29,6 +29,50 @@ public class AssetList : MonoBehaviour
         }
     }
 
+    public void Menu()
+    {
+        Inventory inventory = FindObjectOfType<Inventory>();
+
+        BotHead botHead = botHeadPrefab.GetComponent<BotHead>();
+        BotBody botBody = botBodyPrefab.GetComponent<BotBody>();
+        BotArm botArm = armPrefab.GetComponent<BotArm>();
+        BotLeg botLeg = legPrefab.GetComponent<BotLeg>();
+
+        Clear();
+
+        foreach (KeyValuePair<HeadType, int> head in inventory.heads)
+        {
+            GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
+            MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
+
+            menuAsset.SetupCatalog(botHead.GetSpriteForType(head.Key), 1, head.Key.ToString());// TODO
+        }
+
+        foreach (KeyValuePair<RobotType, int> body in inventory.bodies)
+        {
+            GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
+            MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
+
+            menuAsset.SetupCatalog(botBody.GetSpriteForType(body.Key), 1, body.Key.ToString());// TODO
+        }
+
+        foreach (KeyValuePair<ArmType, int> arm in inventory.arms)
+        {
+            GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
+            MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
+
+            menuAsset.SetupCatalog(botArm.GetSpriteForType(arm.Key), 1, arm.Key.ToString());// TODO
+        }
+
+        foreach (KeyValuePair<LegType, int> leg in inventory.legs)
+        {
+            GameObject assetItemInstance = Instantiate(assetItemPrefab, transform);
+            MenuAsset menuAsset = assetItemInstance.GetComponent<MenuAsset>();
+
+            menuAsset.SetupCatalog(botLeg.GetSpriteForType(leg.Key), 1, leg.Key.ToString());// TODO
+        }
+    }
+
     public void BuildHeadList(Dictionary<HeadType, int> heads)
     {
         Clear();

@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public bool isHoldingPart = false;
     public GameObject currentHeldObject;
+    [SerializeField] AssetList al;
 
     void Awake()
     {
@@ -28,6 +29,17 @@ public class PlayerController : MonoBehaviour
         Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Move(targetVelocity);
         SetSortingOrder();
+
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            if (!al.gameObject.activeSelf)
+            {
+                al.Menu();
+                al.gameObject.SetActive(true);
+            }
+            else
+                al.gameObject.SetActive(false);
+        }
     }
 
     void Move(Vector2 targetVelocity)

@@ -5021,6 +5021,7 @@ MonoBehaviour:
   sprite: {fileID: 922801960}
   isHoldingPart: 0
   currentHeldObject: {fileID: 0}
+  al: {fileID: 865127029}
 --- !u!50 &1900259103
 Rigidbody2D:
   serializedVersion: 4

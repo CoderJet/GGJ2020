@@ -57,13 +57,31 @@ public class PlayerController : MonoBehaviour
         currentHeldObject = null;
         partGO.transform.SetParent(this.transform);
         partGO.transform.localPosition = Vector3.zero;
+        //if (partGO.GetComponent<Animator>())
+        //    partGO.GetComponent<Animator>().runtimeAnimatorController = null;
+        Destroy(partGO.GetComponent<Animator>());
+        partGO.GetComponent<SpriteRenderer>().sortingOrder = 10;
+        if (partGO.GetComponentsInChildren<SpriteRenderer>().Length > 0)
+        {
+            foreach (SpriteRenderer rend in partGO.GetComponentsInChildren<SpriteRenderer>())
+            {
+                if (rend.transform == partGO.transform)
+                    continue;
+
+                var col = rend.color;
+                col.a = 0;
+                rend.color = col;
+            }
+        }
         currentHeldObject = partGO;
     }
 
-    public void GivePart()
+    public GameObject GivePart()
     {
+        GameObject ret = currentHeldObject;
         isHoldingPart = false;
         currentHeldObject.transform.SetParent(null);
-        Destroy(currentHeldObject);
+        currentHeldObject = null;
+        return ret;
     }
 }

@@ -4,6 +4,7 @@
 public class BotHead : MonoBehaviour
 {
     Animator animator;
+    SpriteRenderer renderer;
 
     public HeadType headType;
 
@@ -18,19 +19,25 @@ public class BotHead : MonoBehaviour
     public void Init()
     {
         animator = GetComponent<Animator>();
+        renderer = GetComponent<SpriteRenderer>();
 
         int type = Random.Range(0, 5);
         headType = (HeadType)type;
 
         if (animator)
             animator.SetInteger("Type", type);
+        renderer.sprite = GetSprite();
     }
 
     public void Copy(BotHead head)
     {
-        this.headType = head.headType;
-        this.animator.SetInteger("Type", (int)this.headType);
-        this.isBroken = head.isBroken;
+        renderer = GetComponent<SpriteRenderer>();
+
+        headType = head.headType;
+        if (this.animator)
+            this.animator.SetInteger("Type", (int)this.headType);
+        isBroken = head.isBroken;
+        renderer.sprite = GetSprite();
     }
 
     public Sprite GetSprite()

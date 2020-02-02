@@ -4,6 +4,7 @@
 public class BotLeg : MonoBehaviour
 {
     Animator animator;
+    SpriteRenderer renderer;
 
     public LegType legType;
 
@@ -18,11 +19,24 @@ public class BotLeg : MonoBehaviour
     public void Init()
     {
         animator = GetComponent<Animator>();
+        renderer = GetComponent<SpriteRenderer>();
 
         int type = Random.Range(0, 4);
         legType = (LegType)type;
 
         animator.SetInteger("Type", type);
+    }
+
+    public void Copy(BotLeg leg)
+    {
+        if (renderer == null)
+            renderer = GetComponent<SpriteRenderer>();
+
+        this.legType = leg.legType;
+        if (this.animator)
+            this.animator.SetInteger("Type", (int)this.legType);
+        this.isBroken = leg.isBroken;
+        this.renderer.sprite = GetSprite();
     }
 
     public Sprite GetSprite()

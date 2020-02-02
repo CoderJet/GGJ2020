@@ -55,10 +55,15 @@ public class Robot : MonoBehaviour
 
         head.Init();
         body.Init();
+        body.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         lArm.Init();
+        lArm.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         rArm.Init();
+        rArm.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         lLeg.Init();
+        lLeg.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         rLeg.Init();
+        rLeg.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
 
         GenerateFaults();
     }
@@ -100,6 +105,37 @@ public class Robot : MonoBehaviour
             totalValue += 2;
     }
 
+    public Sprite GetSprite(Slot slot)
+    {
+        switch (slot)
+        {
+            case Slot.head:
+                if (head != null)
+                    return head.GetSprite();
+                break;
+            case Slot.body:
+                break;
+            case Slot.leftArm:
+                if (lArm != null)
+                    return lArm.GetSprite();
+                break;
+            case Slot.rightArm:
+                if (rArm != null)
+                    return rArm.GetSprite();
+                break;
+            case Slot.leftLeg:
+                if (lLeg != null)
+                    return lLeg.GetSprite();
+                break;
+            case Slot.rightLeg:
+                if (rLeg != null)
+                    return rLeg.GetSprite();
+                break;
+        }
+
+        return null;
+    }
+
     public GameObject TakeArm(bool left = false)
     {
         GameObject go = Instantiate(armPrefab);
@@ -108,17 +144,63 @@ public class Robot : MonoBehaviour
         return go;
     }
 
+    public GameObject TakeLeg(bool left = false)
+    {
+        GameObject go = Instantiate(legPrefab);
+        go.GetComponent<BotLeg>().Copy(left ? lLeg : rLeg);
+        if (left) lLeg = null; else rLeg = null;
+        return go;
+    }
+
+    public GameObject TakeHead()
+    {
+        GameObject go = Instantiate(botHeadPrefab);
+        go.GetComponent<BotHead>().Copy(head);
+        head = null;
+        return go;
+    }
+
+    public GameObject TakeBody()
+    {
+        GameObject go = Instantiate(botBodyPrefab);
+        //go.GetComponent<BotBody>().Copy(body);
+        body = null;
+        return go;
+    }
+
+    public void FixPart(GameObject part, bool left = false)
+    {
+        if (part.GetComponent<BotHead>() != null)
+        {
+            FixHead(part.GetComponent<BotHead>());
+        }
+        else if (part.GetComponent<BotBody>() != null)
+        {
+            FixBody(part.GetComponent<BotBody>());
+        }
+        else if (part.GetComponent<BotArm>() != null)
+        {
+            FixArm(part.GetComponent<BotArm>(), left);
+        }
+        else if (part.GetComponent<BotLeg>() != null)
+        {
+            FixLeg(part.GetComponent<BotLeg>(), left);
+        }
+
+        // Destroy it afterwards.
+    }
+
     public void FixArm(BotArm arm, bool left = false)
     {
         if (left)
         {
             lArm = arm;
-            lArm.isBroken = false;
+            lArm.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         }
         else
         {
             rArm = arm;
-            rArm.isBroken = false;
+            rArm.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         }
     }
 
@@ -127,25 +209,25 @@ public class Robot : MonoBehaviour
         if (left)
         {
             lLeg = leg;
-            lLeg.isBroken = false;
+            lLeg.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         }
         else
         {
             rLeg = leg;
-            rLeg.isBroken = false;
+            rLeg.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         }
     }
 
     public void FixHead(BotHead head)
     {
         this.head = head;
-        this.head.isBroken = false;
+        head.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
     }
 
     public void FixBody(BotBody body)
     {
         this.body = body;
-        this.body.isBroken = false;
+        body.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
     }
 
     public string GetTypeFriendly()
@@ -218,4 +300,4 @@ public class Robot : MonoBehaviour
 
         return ret;
     }
-}
+} 

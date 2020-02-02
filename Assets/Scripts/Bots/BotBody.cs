@@ -26,6 +26,11 @@ public class BotBody : MonoBehaviour
             animator.SetInteger("Type", (int)robotType);
     }
 
+    public void Copy(BotBody body)
+    {
+
+    }
+
     public Sprite GetSprite()
     {
         return GetSpriteForType(robotType);

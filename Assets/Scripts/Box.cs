@@ -14,13 +14,17 @@ public class Box : MonoBehaviour
     [SerializeField] BoxType boxType;
     [SerializeField] LayerMask playerMask;
 
+    private bool inTriggerArea = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        inTriggerArea = true;
         tag.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        inTriggerArea = false;
         tag.SetActive(false);
     }
 
@@ -123,13 +127,19 @@ public class Box : MonoBehaviour
                     {
                         //inventory.binItems.Add(playerController.currentHeldObject);
                         Scrap++;
-                        playerController.GivePart();
+                        Destroy(playerController.GivePart());
                     }
                     break;
                 default:
                     break;
             }
         }
+    }
+
+    private void Update()
+    {
+        if (Input.GetButton("Jump") && inTriggerArea)
+            Interact();
     }
 }
 

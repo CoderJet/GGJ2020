@@ -23,12 +23,12 @@ public class Robot : MonoBehaviour
     public Transform leftLegSocket;
     public Transform rightLegSocket;
 
-    BotHead head;
-    BotBody body;
-    BotArm lArm;
-    BotArm rArm;
-    BotLeg lLeg;
-    BotLeg rLeg;
+    public BotHead head;
+    public BotBody body;
+    public BotArm lArm;
+    public BotArm rArm;
+    public BotLeg lLeg;
+    public BotLeg rLeg;
 
     void Awake()
     {

@@ -63,3 +63,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9459e55a7c7f1d4f850d951024c0e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armType: 0
+  isBroken: 0
+  BrokenArm: {fileID: -3428087792063415401, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  MachineGunArm: {fileID: 5273283247581994665, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  PaintGunArm: {fileID: -8067939138504362332, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  HammerArm: {fileID: 7128101710459536895, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  ShearsArm: {fileID: -714199222958724908, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  MopArm: {fileID: 5287432897464094238, guid: 5cf685b674b0ac84bbef7dc87460244e, type: 3}
+  BladeArm: {fileID: -1502832078581251103, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  RollerArm: {fileID: -370737698351165915, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  CementArm: {fileID: 1765305487985320344, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  ChainsawArm: {fileID: -6687187080769669837, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  VacuumArm: {fileID: -5349344482722970669, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  LaserArm: {fileID: -7799988677944796516, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  TwineArm: {fileID: -3814621335465759423, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  NailgunArm: {fileID: -4634732108472479491, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  FlamethrowerArm: {fileID: -5948971572079730416, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  PaintbrushArm: {fileID: -6112253565314823511, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}

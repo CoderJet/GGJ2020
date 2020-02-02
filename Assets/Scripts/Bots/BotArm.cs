@@ -9,6 +9,23 @@ public class BotArm : MonoBehaviour
 
     public bool isBroken = false;
 
+    public Sprite BrokenArm;
+    public Sprite MachineGunArm;
+    public Sprite PaintGunArm;
+    public Sprite HammerArm;
+    public Sprite ShearsArm;
+    public Sprite MopArm;
+    public Sprite BladeArm;
+    public Sprite RollerArm;
+    public Sprite CementArm;
+    public Sprite ChainsawArm;
+    public Sprite VacuumArm;
+    public Sprite LaserArm;
+    public Sprite TwineArm;
+    public Sprite NailgunArm;
+    public Sprite FlamethrowerArm;
+    public Sprite PaintbrushArm;
+
     public void Init()
     {
         animator = GetComponent<Animator>();
@@ -83,9 +100,10 @@ public class BotArm : MonoBehaviour
                 retScore += type == RobotType.construction ? 2 : 0;
                 retScore += type == RobotType.kill ? 2 : 0;
                 break;
-            case ArmType.mower:
-                retScore += type == RobotType.gardener ? 2 : 0;
-                retScore += type == RobotType.kill ? 1 : 0;
+            case ArmType.paintbrush:
+                retScore += type == RobotType.artist ? 2 : 0;
+                retScore += type == RobotType.construction ? 1 : 0;
+                retScore += type == RobotType.cleaner ? 1 : 0;
                 break;
             case ArmType.flamethrower:
                 retScore += type == RobotType.artist ? 2 : 0;
@@ -99,6 +117,52 @@ public class BotArm : MonoBehaviour
         }
 
         return retScore;
+    }
+
+    public Sprite GetSprite()
+    {
+        return GetSpriteForType(armType);
+    }
+
+    private Sprite GetSpriteForType(ArmType type)
+    {
+        if (isBroken)
+            return BrokenArm;
+
+        switch (type)
+        {
+            case ArmType.machinegun:
+                return MachineGunArm;
+            case ArmType.paintgun:
+                return PaintGunArm;
+            case ArmType.hammer:
+                return HammerArm;
+            case ArmType.shears:
+                return ShearsArm;
+            case ArmType.mop:
+                return MopArm;
+            case ArmType.blade:
+                return BladeArm;
+            case ArmType.roller:
+                return RollerArm;
+            case ArmType.cement:
+                return CementArm;
+            case ArmType.chainsaw:
+                return ChainsawArm;
+            case ArmType.vacuum:
+                return VacuumArm;
+            case ArmType.laser:
+                return LaserArm;
+            case ArmType.twine:
+                return TwineArm;
+            case ArmType.nailgun:
+                return NailgunArm;
+            case ArmType.flamethrower:
+                return FlamethrowerArm;
+            case ArmType.paintbrush:
+                return PaintbrushArm;
+        }
+        return null;
     }
 }
 
@@ -117,6 +181,6 @@ public enum ArmType
     laser,
     twine,
     nailgun,
-    mower,
-    flamethrower
+    flamethrower,
+    paintbrush
 }

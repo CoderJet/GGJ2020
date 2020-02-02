@@ -63,3 +63,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e594e7a3793614193799c62afc1de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BrokenBody: {fileID: -3659310473224116634, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  CleanerBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  GardenerBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  ConstructionBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  ArtistBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  KillBody: {fileID: 4029816493017963190, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  robotType: 0
+  isBroken: 0

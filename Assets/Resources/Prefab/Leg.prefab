@@ -63,3 +63,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da4f1ea96c03d848af1f6b8172e963e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legType: 0
+  isBroken: 0
+  BrokenLeg: {fileID: 8074616140399786902, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  SpeedLeg: {fileID: -3346181705510121066, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  ATVLeg: {fileID: 1281929396825760482, guid: 5cf685b674b0ac84bbef7dc87460244e, type: 3}
+  HoverLeg: {fileID: -3764239998211671619, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}
+  UnicycleLeg: {fileID: -8786884447746998488, guid: 5cf685b674b0ac84bbef7dc87460244e,
+    type: 3}

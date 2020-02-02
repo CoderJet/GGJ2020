@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    Report report;
+    Report report = new Report();
 
     SaveData saveData;
     public TextMeshProUGUI RobotType;
@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     public Conveyor conveyorBelt;
     public Button button;
+
+    public RobotDisplay display;
 
     public GameObject spawnBot;
     private GameObject currentRobot;
@@ -53,8 +55,13 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump") && currentRobotMovingToRepairBay == false && lastRobotMovingToFinishBay == false && currentRobot != null)
             {
-
+                display.UpdateRobot(currentRobot.GetComponent<Robot>());
+                display.Show();
             }
+        }
+        else
+        {
+            display.Hide();
         }
 
         if (currentRobotMovingToRepairBay)
@@ -90,6 +97,7 @@ public class GameManager : MonoBehaviour
         {
             currentRobot = Instantiate(spawnBot, robotSpawnPosition.transform.position, Quaternion.identity);
             InitialiseText(currentRobot.GetComponent<Robot>());
+            display.UpdateRobot(currentRobot.GetComponent<Robot>());
             conveyorBelt.AnimateConveyor(true);
             currentRobotMovingToRepairBay = true;
         }
@@ -99,6 +107,7 @@ public class GameManager : MonoBehaviour
             lastRobot = currentRobot;
             currentRobot = Instantiate(spawnBot, robotSpawnPosition.transform.position, Quaternion.identity);
             InitialiseText(currentRobot.GetComponent<Robot>());
+            display.UpdateRobot(currentRobot.GetComponent<Robot>());
             conveyorBelt.AnimateConveyor(true);
             currentRobotMovingToRepairBay = true;
             lastRobotMovingToFinishBay = true;
